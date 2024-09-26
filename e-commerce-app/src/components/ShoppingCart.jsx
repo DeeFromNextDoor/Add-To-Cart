@@ -61,8 +61,8 @@ const ShoppingCart = ({ cartState, cartDispatch }) => {
       quantity: item.quantity,
     })),
     mode: "payment",
-    successUrl: `${window.location.origin}/Success`,
-    cancelUrl: `${window.location.origin}/Cancel`,
+    successUrl: import.meta.env.VITE_SUCCESS_URL,
+    cancelUrl: import.meta.env.VITE_CANCEL_URL,
   };
 
   const handleCheckout = async () => {

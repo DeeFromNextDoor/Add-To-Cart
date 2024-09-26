@@ -13,13 +13,12 @@ import { useSharedContext } from "./context/SharedAppContex";
 import { ToastContainer } from "react-toastify";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
-import PaymentPage from "./components/PaymentPage";
 import Success from "./components/Success";
 import Cancel from "./components/Cancel";
 
 const App = () => {
   const { state, dispatch } = useAppContext();
-  const { cartState, isLoading, error, products } = state;
+  const { cartState, isLoading, error } = state;
   const { isNavmenuVisible, closeNavmenu, isUserMenuVisible, closeUserMenu } =
     useSharedContext();
   const [productsWithPriceIds, setProductsWithPriceIds] = useState([]);
